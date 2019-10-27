@@ -1,4 +1,5 @@
-const {ccclass,property}=cc._decorator 
+const {ccclass,property}=cc._decorator
+import md5 from 'md5.js';
 
 @ccclass
 export class cardEventMain extends cc.Component{

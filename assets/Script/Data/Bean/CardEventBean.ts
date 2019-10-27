@@ -13,7 +13,7 @@ export class CardEventBean extends cc.Component {
     cardExplain: cc.Label = null;
 
     @property(cc.ScrollView)
-    selectEvent: cc.ScrollView = null;
+    selectEventScroll: cc.ScrollView = null;
 
     @property(cc.Prefab)
     buttonCard: cc.Prefab = null;
@@ -33,11 +33,11 @@ export class CardEventBean extends cc.Component {
             card.selectEvent.forEach(element => {
                 let cardButtonNode = cc.instantiate(this.buttonCard);
                 cardButtonNode.getComponentInChildren(cc.Label).string = element;
-                this.selectEvent.content.addChild(cardButtonNode);
+                this.selectEventScroll.content.addChild(cardButtonNode);
             });
-            this.selectEvent.node.active = true;
+            this.selectEventScroll.node.active = true;
         } else {
-            this.selectEvent.node.active = false;
+            this.selectEventScroll.node.active = false;
         }
 
     }
